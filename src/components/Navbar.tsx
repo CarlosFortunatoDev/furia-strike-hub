@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link to="/">
             <img
               src="/furia-logo.png"
-              alt="FURIA Logo"
+              alt="Logo FURIA"
               className="h-10 w-auto"
               onError={(e) => {
                 e.currentTarget.src = "https://placehold.co/120x40/000000/FF5900?text=FURIA";
@@ -49,14 +49,14 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="#members" className="nav-link">Members</Link>
-          <Link to="#highlights" className="nav-link">Highlights</Link>
-          <Link to="#tips" className="nav-link">Tips</Link>
+          <Link to="/" className="nav-link">Início</Link>
+          <Link to="#members" className="nav-link">Jogadores</Link>
+          <Link to="#highlights" className="nav-link">Destaques</Link>
+          <Link to="#tips" className="nav-link">Dicas</Link>
           <Button 
             className="ml-4 bg-furia hover:bg-furia/80 text-white"
           >
-            Support Us
+            Apoie-nos
           </Button>
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           <button 
             onClick={toggleMenu}
             className="text-furia-light hover:text-furia p-2"
-            aria-label="Toggle Menu"
+            aria-label="Alternar Menu"
           >
             {isMenuOpen ? (
               <X size={24} />
@@ -80,14 +80,14 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-secondary border-t border-furia/10 animate-fade-in">
           <div className="container mx-auto px-4 py-4 space-y-3">
-            <Link to="/" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link to="#members" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Members</Link>
-            <Link to="#highlights" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Highlights</Link>
-            <Link to="#tips" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Tips</Link>
+            <Link to="/" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Início</Link>
+            <Link to="#members" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Jogadores</Link>
+            <Link to="#highlights" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Destaques</Link>
+            <Link to="#tips" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Dicas</Link>
             <Button 
               className="w-full bg-furia hover:bg-furia/80 text-white mt-4"
             >
-              Support Us
+              Apoie-nos
             </Button>
           </div>
         </div>

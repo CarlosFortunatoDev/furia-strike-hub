@@ -7,14 +7,14 @@ const playerData = [
     id: 1,
     name: "arT",
     fullName: "Andrei Piovezan",
-    role: "Captain / IGL",
+    role: "Capitão / IGL",
     image: "/player-art.png",
     stats: {
       rating: "1.15",
       headshot: "48.2%",
       kdr: "1.24"
     },
-    bio: "The fearless leader and in-game strategist known for his aggressive playstyle."
+    bio: "O líder destemido e estrategista conhecido pelo seu estilo de jogo agressivo."
   },
   {
     id: 2,
@@ -27,20 +27,20 @@ const playerData = [
       headshot: "52.7%",
       kdr: "1.53"
     },
-    bio: "Consistently one of the highest-rated players with exceptional rifle accuracy."
+    bio: "Consistentemente um dos jogadores mais bem avaliados com excepcional precisão com rifle."
   },
   {
     id: 3,
     name: "yuurih",
     fullName: "Yuri Santos",
-    role: "Rifler / Support",
+    role: "Rifler / Suporte",
     image: "/player-yuurih.png",
     stats: {
       rating: "1.24",
       headshot: "50.1%",
       kdr: "1.37"
     },
-    bio: "Versatile player with exceptional clutch capabilities and supportive gameplay."
+    bio: "Jogador versátil com capacidade excepcional de clutch e gameplay de suporte."
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const playerData = [
       headshot: "54.3%",
       kdr: "1.31"
     },
-    bio: "Consistent fragger with excellent site control and mid-round decision making."
+    bio: "Fragger consistente com excelente controle de site e tomada de decisão."
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ const playerData = [
       headshot: "38.2%",
       kdr: "1.22"
     },
-    bio: "Rising AWP star with aggressive playstyle and impressive reflexes."
+    bio: "AWPer ascendente com estilo de jogo agressivo e reflexos impressionantes."
   }
 ];
 
@@ -75,10 +75,10 @@ const MembersSection = () => {
     <section id="members" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Team <span className="text-furia">Members</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Nossos <span className="text-furia">Jogadores</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
-            Meet the skilled players that make up FURIA's Counter-Strike roster. 
-            Each member brings unique talents and expertise to create one of the most formidable teams in the competitive scene.
+            Conheça os jogadores talentosos que compõem o elenco de Counter-Strike da FURIA.
+            Cada membro traz talentos e expertise únicos para criar um dos times mais formidáveis do cenário competitivo.
           </p>
         </div>
         
@@ -102,7 +102,7 @@ const MembersSection = () => {
               
               <CardContent className="p-4">
                 <div className="text-furia-light mb-4">
-                  <p className="text-sm text-gray-400">Role</p>
+                  <p className="text-sm text-gray-400">Função</p>
                   <p className="font-semibold">{player.role}</p>
                 </div>
                 

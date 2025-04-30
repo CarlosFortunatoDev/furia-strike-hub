@@ -10,34 +10,34 @@ const highlightsData = [
     thumbnail: "/highlight-1.jpg",
     views: "2.4M",
     duration: "14:22",
-    date: "Jul 24, 2023",
+    date: "24 Jul, 2023",
     videoId: "example1"
   },
   {
     id: 2,
-    title: "FURIA Best Plays 2023 - KSCERATO Ace",
+    title: "Melhores Jogadas FURIA 2023 - KSCERATO Ace",
     thumbnail: "/highlight-2.jpg",
     views: "1.8M",
     duration: "8:45",
-    date: "Sep 15, 2023",
+    date: "15 Set, 2023",
     videoId: "example2"
   },
   {
     id: 3,
-    title: "arT's Aggressive Plays Compilation",
+    title: "Compilação de Jogadas Agressivas do arT",
     thumbnail: "/highlight-3.jpg",
     views: "1.2M",
     duration: "10:17",
-    date: "Oct 3, 2023",
+    date: "3 Out, 2023",
     videoId: "example3"
   },
   {
     id: 4,
-    title: "FURIA's Road to Major - Best Moments",
+    title: "FURIA Rumo ao Major - Melhores Momentos",
     thumbnail: "/highlight-4.jpg",
     views: "3.1M",
     duration: "18:05",
-    date: "Nov 12, 2023",
+    date: "12 Nov, 2023",
     videoId: "example4"
   }
 ];
@@ -47,10 +47,10 @@ const HighlightsSection = () => {
     <section id="highlights" className="py-20 bg-furia-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Match <span className="text-furia">Highlights</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Melhores <span className="text-furia">Momentos</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
-            Relive the most exciting moments from FURIA's competitive matches. 
-            From clutch plays to strategic masterclasses, witness the skill and determination that define our team.
+            Reviva os momentos mais emocionantes das partidas competitivas da FURIA.
+            De jogadas clutch a obras-primas estratégicas, testemunhe a habilidade e determinação que definem nosso time.
           </p>
         </div>
         
@@ -63,7 +63,7 @@ const HighlightsSection = () => {
                   alt={highlight.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
-                    e.currentTarget.src = `https://placehold.co/600x400/1a1a1a/FF5900?text=Highlight`;
+                    e.currentTarget.src = `https://placehold.co/600x400/1a1a1a/FF5900?text=Destaque`;
                   }}
                 />
                 
@@ -85,7 +85,7 @@ const HighlightsSection = () => {
               <CardContent className="p-4">
                 <h3 className="text-furia-light font-semibold mb-2 line-clamp-1">{highlight.title}</h3>
                 <div className="flex justify-between text-sm text-gray-400">
-                  <span>{highlight.views} views</span>
+                  <span>{highlight.views} visualizações</span>
                   <span>{highlight.date}</span>
                 </div>
               </CardContent>
@@ -95,7 +95,7 @@ const HighlightsSection = () => {
         
         <div className="text-center mt-12">
           <Button className="bg-furia hover:bg-furia/80 text-white px-8">
-            View All Highlights
+            Ver Todos os Destaques
           </Button>
         </div>
       </div>
