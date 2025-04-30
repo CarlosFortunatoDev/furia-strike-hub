@@ -7,6 +7,7 @@ import HighlightsSection from '../components/HighlightsSection';
 import TipsSection from '../components/TipsSection';
 import UpcomingMatches from '../components/UpcomingMatches';
 import Footer from '../components/Footer';
+import AIChat from '../components/AIChat';
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <HighlightsSection />
       <TipsSection />
       <Footer />
+      <AIChat />
     </div>
   );
 };
