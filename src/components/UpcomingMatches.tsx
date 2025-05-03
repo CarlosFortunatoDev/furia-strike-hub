@@ -11,7 +11,7 @@ const matchesData = [
     date: "15 de Maio, 2025",
     time: "18:00 CEST",
     tournament: "ESL Pro League",
-    streamLink: "#"
+    streamLink: "https://www.twitch.tv/ESLCS"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const matchesData = [
     date: "18 de Maio, 2025",
     time: "20:30 CEST",
     tournament: "BLAST Premier",
-    streamLink: "#"
+    streamLink: "https://www.twitch.tv/blastpremier"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const matchesData = [
     date: "22 de Maio, 2025",
     time: "19:15 CEST",
     tournament: "ESL Pro League",
-    streamLink: "#"
+    streamLink: "https://www.twitch.tv/ESLCS"
   }
 ];
 
@@ -93,9 +93,9 @@ const UpcomingMatches = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-furia hover:bg-furia/80 text-white">
+                <a href={match.streamLink} target='_blank'><Button className="w-full bg-furia hover:bg-furia/80 text-white">
                   Assistir Transmissão
-                </Button>
+                </Button></a>
               </CardContent>
             </Card>
           ))}

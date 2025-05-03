@@ -26,10 +26,10 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4 text-furia">Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-furia transition-colors">Início</Link></li>
-              <li><Link to="#members" className="text-gray-400 hover:text-furia transition-colors">Jogadores</Link></li>
-              <li><Link to="#highlights" className="text-gray-400 hover:text-furia transition-colors">Destaques</Link></li>
-              <li><Link to="#tips" className="text-gray-400 hover:text-furia transition-colors">Dicas</Link></li>
+              <li><a href="#hero" className="text-gray-400 hover:text-furia transition-colors">Início</a></li>
+              <li><a href="#members" className="text-gray-400 hover:text-furia transition-colors">Jogadores</a></li>
+              <li><a href="#highlights" className="text-gray-400 hover:text-furia transition-colors">Destaques</a></li>
+              <li><a href="#tips" className="text-gray-400 hover:text-furia transition-colors">Dicas</a></li>
             </ul>
           </div>
 
@@ -38,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="https://twitter.com/FURIA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Twitter</a></li>
               <li><a href="https://instagram.com/furiagg" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Instagram</a></li>
-              <li><a href="https://www.youtube.com/@FURIAgg" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">YouTube</a></li>
+              <li><a href="https://www.youtube.com/@FURIAggCS" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">YouTube</a></li>
               <li><a href="https://twitch.tv/team/furia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Twitch</a></li>
             </ul>
           </div>

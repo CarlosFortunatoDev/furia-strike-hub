@@ -14,17 +14,17 @@ const Hero = () => {
           <span className="text-furia font-title">FURIA</span> CS
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-300">
-          A potência brasileira que está dominando o mundo do Counter-Strike.
-          De azarões a campeões, acompanhe nossa jornada até o topo.
+          FURIA não é só um nome, é um estado de espírito. Nascidos para competir, criados para vencer.
+          Bem-vindo ao território dos imbatíveis.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-furia hover:bg-furia/50 text-white px-8 py-6 text-lg">
-            Últimas Partidas
-          </Button>
-          <Button variant="outline" className="border-furia text-furia-dark hover:bg-furia-dark/10 hover:text-furia-light px-8 py-6 text-lg">
+          <a href='#matches'><Button className="bg-furia hover:bg-furia/50 text-white px-8 py-6 text-lg">
+            Próximas Partidas
+          </Button></a>
+          <a href='#members'><Button variant="outline" className="border-furia text-furia-dark hover:bg-furia-dark/10 hover:text-furia-light px-8 py-6 text-lg">
             Conheça a Equipe
-          </Button>
+          </Button></a>
         </div>
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">

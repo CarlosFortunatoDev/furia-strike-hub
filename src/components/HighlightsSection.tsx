@@ -7,39 +7,39 @@ import { Youtube, Play } from 'lucide-react';
 const highlightsData = [
   {
     id: 1,
-    title: "FURIA CAMPEÃ DO ELISA MASTERS ESPOO 2023",
-    thumbnail: "/highlight-1.jpg",
-    views: "2.4M",
-    duration: "14:22",
-    date: "24 Jul, 2023",
-    videoId: "SpKVCgq1oyY"
+    title: "Campões Elisa Masters ESPOO 2023",
+    thumbnail: "https://i.ytimg.com/vi/ct5WjWdfGSI/maxresdefault.jpg",
+    views: "103K",
+    duration: "17:40",
+    date: "04 Dez, 2023",
+    videoId: "ct5WjWdfGSI?si=Jb5aGP1p8KvLr8oR"
   },
   {
     id: 2,
-    title: "Melhores Jogadas FURIA 2023 - KSCERATO Ace",
-    thumbnail: "/highlight-2.jpg",
-    views: "1.8M",
-    duration: "8:45",
-    date: "15 Set, 2023",
-    videoId: "fh-a_HH0D7Y"
+    title: "Classificação playoffs #eslproleague",
+    thumbnail: "https://i.ytimg.com/vi_webp/8aIcU-_5W34/sddefault.webp",
+    views: "149K",
+    duration: "28:07",
+    date: "05 Set, 2023",
+    videoId: "8aIcU-_5W34?si=Ng41Bnp5cbQ-Ptfo"
   },
   {
     id: 3,
-    title: "Compilação de Jogadas Agressivas do arT",
-    thumbnail: "/highlight-3.jpg",
-    views: "1.2M",
-    duration: "10:17",
-    date: "3 Out, 2023",
-    videoId: "D18oxp1SxaM"
+    title: "Um dia em Malta com o time",
+    thumbnail: "https://i.ytimg.com/vi_webp/rgbYjZb_PDo/sddefault.webp",
+    views: "121K",
+    duration: "12:28",
+    date: "25 Jul, 2023",
+    videoId: "rgbYjZb_PDo?si=zaWX5ByZzhCMoeUd"
   },
   {
     id: 4,
-    title: "FURIA Rumo ao Major - Melhores Momentos",
-    thumbnail: "/highlight-4.jpg",
-    views: "3.1M",
-    duration: "18:05",
-    date: "12 Nov, 2023",
-    videoId: "HmAeB0zorKs"
+    title: "Comunicação Furiosa #IEMCOLOGNE",
+    thumbnail: "https://i.ytimg.com/vi_webp/1Xa9-wxluZY/sddefault.webp",
+    views: "79K",
+    duration: "11:22",
+    date: "05 Ago, 2023",
+    videoId: "1Xa9-wxluZY?si=FafOFMFp3Sg0n71x"
   }
 ];
 
@@ -100,12 +100,6 @@ const HighlightsSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button className="bg-furia hover:bg-furia/80 text-white px-8">
-            Ver Todos os Destaques
-          </Button>
         </div>
       </div>
 
