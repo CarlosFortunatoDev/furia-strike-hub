@@ -57,8 +57,8 @@ useEffect(() => {
     setIsLoading(true);
 
     const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
     try {
-      // Chamada direta para a API interna
       const response = await fetch(`http://localhost:3001/api/chat`, {
         method: 'POST',
         headers: {
@@ -68,26 +68,45 @@ useEffect(() => {
       });
 
       if (!response.ok) {
-        throw new Error('Falha na comunicação com o servidor');
+        throw new Error('Erro na API primária');
       }
 
       const data = await response.json();
-
-      // Add AI response to chat
       setMessages(prev => [...prev, { role: 'assistant', content: data.response }]);
     } catch (error) {
-      console.error('Erro ao enviar mensagem:', error);
-      toast.error('Não foi possível conectar ao chat. Tente novamente mais tarde.');
+      console.warn('Erro na primeira tentativa, tentando fallback:', error);
 
-      // Add error message to chat
-      setMessages(prev => [...prev, {
-        role: 'assistant',
-        content: 'Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.'+ error.message
-      }]);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+      // Tentar um endpoint alternativo
+      try {
+        const fallbackResponse = await fetch('https://furia-strike-hub.vercel.app/api/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: userMessage }),
+        });
+
+        if (!fallbackResponse.ok) {
+          throw new Error('Erro também na API de fallback');
+        }
+
+        const fallbackData = await fallbackResponse.json();
+        setMessages(prev => [...prev, { role: 'assistant', content: fallbackData.response }]);
+      } catch (fallbackError) {
+        console.error('Falha total no fetch:', fallbackError);
+        toast.error('O chat está indisponível no momento.');
+
+        setMessages(prev => [
+          ...prev,
+          {
+            role: 'assistant',
+            content: 'Estamos enfrentando problemas técnicos, tanto na API principal quanto na reserva. Tente novamente mais tarde.',
+          },
+        ]);}
+      } finally {
+          setIsLoading(false);
+        }
+      };
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
@@ -146,7 +165,7 @@ useEffect(() => {
           {/*Bloco de mensagens rápidas */}
           {showQuickMessages && (
             <div className="flex flex-wrap gap-2 mb-2">
-              {['Quais são os próximos jogos?', 'Como compro ingressos?', 'Quero saber mais sobre o time.'].map((msg, i) => (
+              {['Fale sobre Fúria', 'Fale sobre as conquistas da Furia', 'Dicas de CS da Furia'].map((msg, i) => (
                 <Button
                   key={i}
                   variant="outline"
