@@ -23,15 +23,15 @@ const AIChat = () => {
   const [showQuickMessages, setShowQuickMessages] = useState(true);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
-  // Scroll to bottom whenever messages change
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-      const scrollArea = scrollAreaRef.current;
-      setTimeout(() => {
-        scrollArea.scrollTop = scrollArea.scrollHeight;
-      }, 100);
-    }
-  }, [messages]);
+// Dentro do seu componente
+const lastMessageRef = useRef<HTMLDivElement | null>(null);
+
+// Scroll to bottom whenever messages change
+useEffect(() => {
+  if (lastMessageRef.current) {
+    lastMessageRef.current.scrollIntoView({ behavior: 'smooth' });
+  }
+}, [messages]);  // Sempre que `messages` mudar, o scroll será atualizado
 
   // Mostra mensagens rápidas ao reabrir o chat
   useEffect(() => {
@@ -56,9 +56,10 @@ const AIChat = () => {
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
 
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
     try {
       // Chamada direta para a API interna
-      const response = await fetch('/api/chat.js', {
+      const response = await fetch(`http://localhost:3001/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +82,7 @@ const AIChat = () => {
       // Add error message to chat
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.'
+        content: 'Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.'+ error.message
       }]);
     } finally {
       setIsLoading(false);
@@ -125,6 +126,7 @@ const AIChat = () => {
                       ? 'bg-furia-dark text-white self-end'
                       : 'bg-furia text-white self-start'
                   }`}
+                  ref={index === messages.length - 1 ? lastMessageRef : null} // Aplica o ref na última mensagem
                 >
                   {message.content}
                 </div>
