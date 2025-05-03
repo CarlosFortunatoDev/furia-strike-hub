@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
-import { MessageSquare, Send, X } from 'lucide-react';
+import { MessageSquare, Send } from 'lucide-react';
 import { Input } from './ui/input';
 import { ScrollArea } from './ui/scroll-area';
 import { toast } from './ui/sonner';
@@ -33,14 +33,14 @@ const AIChat = () => {
     }
   }, [messages]);
 
-    // Mostra mensagens rápidas ao reabrir o chat
-    useEffect(() => {
-      if (inputMessage.trim() === '/') {
-        setShowQuickMessages(true);
-      } else {
-        setShowQuickMessages(false);
-      }
-    }, [inputMessage]);
+  // Mostra mensagens rápidas ao reabrir o chat
+  useEffect(() => {
+    if (inputMessage.trim() === '/') {
+      setShowQuickMessages(true);
+    } else {
+      setShowQuickMessages(false);
+    }
+  }, [inputMessage]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,9 +57,8 @@ const AIChat = () => {
     setIsLoading(true);
 
     try {
-      // Usando a API de mock interna em vez de tentar acessar o localhost
-      // pois quando hospedado no Lovable não conseguimos acessar o localhost
-      const response = await fetch('/api/chat', {
+      // Chamada direta para a API interna
+      const response = await fetch('/api/chat.js', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

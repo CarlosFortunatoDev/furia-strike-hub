@@ -1,6 +1,6 @@
 
 // API endpoint para o chat da IA FURIA
-import { OpenAI } from 'openai';
+import OpenAI from 'openai';
 
 // Inicializar OpenAI com API key
 const openai = new OpenAI({
@@ -19,7 +19,8 @@ export default async function handler(req, res) {
     if (!message) {
       return res.status(400).json({ error: 'Mensagem não fornecida' });
     }
-    
+
+    // Usando try/catch para capturar erros específicos da OpenAI
     try {
       const completion = await openai.chat.completions.create({
         messages: [
@@ -36,13 +37,14 @@ export default async function handler(req, res) {
         max_tokens: 150,
       });
 
-      res.status(200).json({ 
+      // Resposta bem-sucedida da API
+      return res.status(200).json({ 
         response: completion.choices[0].message.content 
       });
     } catch (openaiError) {
       console.error('Erro na chamada da OpenAI:', openaiError);
       
-      // Fallback para respostas mockadas se a OpenAI falhar
+      // Fallback para respostas pré-definidas se a OpenAI falhar
       let response;
       const lowerCaseMessage = message.toLowerCase();
 
@@ -62,10 +64,13 @@ export default async function handler(req, res) {
         response = 'Obrigado pela sua mensagem! A FURIA sempre busca se conectar com os fãs. Para mais informações sobre nosso time, partidas e eventos, visite nosso site oficial!';
       }
 
-      res.status(200).json({ response });
+      return res.status(200).json({ response });
     }
   } catch (error) {
     console.error('Erro no processamento da mensagem:', error);
-    res.status(500).json({ error: 'Erro interno do servidor' });
+    return res.status(500).json({ 
+      error: 'Erro interno do servidor',
+      details: error.message 
+    });
   }
 }
