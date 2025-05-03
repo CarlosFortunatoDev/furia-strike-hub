@@ -35,7 +35,7 @@ const matchesData = [
 
 const UpcomingMatches = () => {
   return (
-    <section className="to-furia-dark py-20 bg-furia-dark">
+    <section id='matches' className="to-furia-dark py-20 bg-furia-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-furia-light mb-4">Próximas <span className="text-furia">Partidas</span></h2>

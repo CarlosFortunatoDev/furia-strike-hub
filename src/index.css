@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,9 +31,13 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 24 100% 50%;
+    --ring: 0, 0%, 0%, 0.6;
 
     --radius: 0.5rem;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-title: 'Anton', serif;
+    --font-mono: 'Fira Code', monospace;
   }
 }
 
@@ -50,10 +54,13 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-                url('/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),
+                url('https://furiagg.fbitsstatic.net/img/b/1be4afd5-a727-4555-81fd-e779a32578be.jpg') no-repeat center center/cover;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
   .nav-link {
     @apply relative px-4 py-2 text-furia-light hover:text-furia transition-colors duration-200;
   }

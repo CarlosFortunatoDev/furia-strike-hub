@@ -4,14 +4,14 @@ import { Button } from './ui/button';
 
 const Hero = () => {
   return (
-    <div className="hero-gradient min-h-screen flex items-center justify-center text-center text-white relative">
+    <div id='hero' className="hero-gradient min-h-screen flex items-center justify-center text-center text-white relative">
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-secondary"></div>
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 py-24">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
-          <span className="text-furia">FURIA</span> CS
+          <span className="text-furia font-title">FURIA</span> CS
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-300">
           A potência brasileira que está dominando o mundo do Counter-Strike.
@@ -19,10 +19,10 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-furia hover:bg-furia/80 text-white px-8 py-6 text-lg">
+          <Button className="bg-furia hover:bg-furia/50 text-white px-8 py-6 text-lg">
             Últimas Partidas
           </Button>
-          <Button variant="outline" className="border-furia text-furia hover:bg-furia/10 px-8 py-6 text-lg">
+          <Button variant="outline" className="border-furia text-furia-dark hover:bg-furia-dark/10 hover:text-furia-light px-8 py-6 text-lg">
             Conheça a Equipe
           </Button>
         </div>
@@ -41,7 +41,7 @@ const Hero = () => {
             <p className="text-gray-400">Fãs no Mundo</p>
           </div>
           <div className="bg-black/50 backdrop-blur-sm p-4 rounded-lg">
-            <p className="text-3xl font-bold text-furia">2016</p>
+            <p className="text-3xl font-bold text-furia">2017</p>
             <p className="text-gray-400">Ano de Fundação</p>
           </div>
         </div>

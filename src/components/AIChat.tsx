@@ -19,6 +19,8 @@ const AIChat = () => {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  // Estado para controlar visibilidade das mensagens rápidas
+  const [showQuickMessages, setShowQuickMessages] = useState(true);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   // Scroll to bottom whenever messages change
@@ -31,9 +33,21 @@ const AIChat = () => {
     }
   }, [messages]);
 
+    // Mostra mensagens rápidas ao reabrir o chat
+    useEffect(() => {
+      if (inputMessage.trim() === '/') {
+        setShowQuickMessages(true);
+      } else {
+        setShowQuickMessages(false);
+      }
+    }, [inputMessage]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
+
+    // Esconde mensagens rápidas ao enviar manualmente
+    setShowQuickMessages(false);
 
     const userMessage = inputMessage;
     setInputMessage('');
@@ -84,7 +98,7 @@ const AIChat = () => {
             <MessageSquare className="w-7 h-7" />
           </Button>
         </SheetTrigger>
-        <SheetContent 
+        <SheetContent
           side="right"
           className="w-[90%] sm:w-[380px] h-[500px] rounded-t-lg flex flex-col bottom-0 top-auto mt-auto mb-20 sm:mb-6"
         >
@@ -107,8 +121,8 @@ const AIChat = () => {
                   key={index}
                   className={`max-w-[80%] p-3 rounded-lg ${
                     message.role === 'user'
-                      ? 'bg-furia text-white self-end'
-                      : 'bg-secondary text-white self-start'
+                      ? 'bg-furia-dark text-white self-end'
+                      : 'bg-furia text-white self-start'
                   }`}
                 >
                   {message.content}
@@ -126,11 +140,35 @@ const AIChat = () => {
             </div>
           </ScrollArea>
 
-          <form onSubmit={handleSubmit} className="border-t pt-4 flex items-center gap-2">
+          {/*Bloco de mensagens rápidas */}
+          {showQuickMessages && (
+            <div className="flex flex-wrap gap-2 mb-2">
+              {['Quais são os próximos jogos?', 'Como compro ingressos?', 'Quero saber mais sobre o time.'].map((msg, i) => (
+                <Button
+                  key={i}
+                  variant="outline"
+                  className="text-xs px-3 py-1 border-furia text-furia hover:bg-furia-dark hover:text-white"
+                  onClick={() => {
+                    setShowQuickMessages(false);
+                    setInputMessage(msg);
+                    setTimeout(() => {
+                      document.getElementById('ai-chat-form')?.dispatchEvent(
+                        new Event('submit', { bubbles: true, cancelable: true })
+                      );
+                    }, 0);
+                  }}
+                >
+                  {msg}
+                </Button>
+              ))}
+            </div>
+          )}
+
+          <form id="ai-chat-form" onSubmit={handleSubmit} className="border-t pt-4 flex items-center gap-2">
             <Input
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
-              placeholder="Digite sua mensagem..."
+              placeholder="Utilize / para mensagens rápidas"
               className="flex-1"
               disabled={isLoading}
             />
@@ -138,7 +176,7 @@ const AIChat = () => {
               type="submit"
               size="icon"
               disabled={isLoading || !inputMessage.trim()}
-              className="bg-furia hover:bg-furia/90"
+              className="bg-furia-dark hover:bg-furia-dark/70"
             >
               <Send className="h-4 w-4" />
             </Button>

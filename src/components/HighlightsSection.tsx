@@ -113,7 +113,7 @@ const HighlightsSection = () => {
       {activeVideo && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
           <div className="relative w-full max-w-4xl">
-            <button 
+            <button
               onClick={closeVideo}
               className="absolute -top-10 right-0 text-white hover:text-furia"
               aria-label="Fechar vídeo"

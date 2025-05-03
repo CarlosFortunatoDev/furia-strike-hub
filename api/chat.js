@@ -11,17 +11,17 @@ export default function handler(req, res) {
 
   try {
     const { message } = req.body;
-    
+
     // Simulate API processing delay
     setTimeout(() => {
       // Mock responses based on keywords in the message
       let response;
-      
+
       const lowerCaseMessage = message.toLowerCase();
-      
+
       if (lowerCaseMessage.includes('oi') || lowerCaseMessage.includes('olá') || lowerCaseMessage.includes('ola')) {
         response = 'Olá! Como posso ajudar você hoje?';
-      } 
+      }
       else if (lowerCaseMessage.includes('horário') || lowerCaseMessage.includes('horario') || lowerCaseMessage.includes('jogo')) {
         response = 'O próximo jogo da FURIA será contra a Team Liquid no dia 10 de maio às 15:00 (horário de Brasília).';
       }
@@ -37,7 +37,7 @@ export default function handler(req, res) {
 
       res.status(200).json({ response });
     }, 1000); // Simulate a 1-second delay for API response
-    
+
   } catch (error) {
     console.error('Erro no processamento da mensagem:', error);
     res.status(500).json({ error: 'Erro interno do servidor' });

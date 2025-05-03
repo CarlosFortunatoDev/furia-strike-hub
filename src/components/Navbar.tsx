@@ -1,31 +1,29 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
-import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+interface NavbarProps {
+  activeSection: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const navLinkClass = (id: string) =>
+    `nav-link px-4 py-2 transition-colors ${
+      activeSection === id ? 'text-furia font-bold border-b-2 border-furia' : 'text-furia-light'
+    }`;
 
   return (
     <nav
@@ -35,24 +33,26 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <Link to="/">
+          <a href="#hero">
             <img
-              src="/furia-logo.png"
+              src="https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png"
               alt="Logo FURIA"
               className="h-10 w-auto"
               onError={(e) => {
-                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png";
+                e.currentTarget.src =
+                  'https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png';
               }}
             />
-          </Link>
+          </a>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-1">
-          <Link to="/" className="nav-link">Início</Link>
-          <Link to="#members" className="nav-link">Jogadores</Link>
-          <Link to="#highlights" className="nav-link">Destaques</Link>
-          <Link to="#tips" className="nav-link">Dicas</Link>
+          <a href="#hero" className={navLinkClass('hero')}>Início</a>
+          <a href="#matches" className={navLinkClass('matches')} onClick={() => setIsMenuOpen(false)}>Partidas</a>
+          <a href="#members" className={navLinkClass('members')}>Jogadores</a>
+          <a href="#highlights" className={navLinkClass('highlights')}>Destaques</a>
+          <a href="#tips" className={navLinkClass('tips')}>Dicas</a>
         </div>
 
         {/* Mobile Navigation Button */}
@@ -62,11 +62,7 @@ const Navbar = () => {
             className="text-furia-light hover:text-furia p-2"
             aria-label="Alternar Menu"
           >
-            {isMenuOpen ? (
-              <X size={24} />
-            ) : (
-              <Menu size={24} />
-            )}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -75,10 +71,11 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-secondary border-t border-furia/10 animate-fade-in">
           <div className="container mx-auto px-4 py-4 space-y-3">
-            <Link to="/" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Início</Link>
-            <Link to="#members" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Jogadores</Link>
-            <Link to="#highlights" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Destaques</Link>
-            <Link to="#tips" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Dicas</Link>
+            <a href="#hero" className={navLinkClass('hero')} onClick={() => setIsMenuOpen(false)}>Início</a>
+            <a href="#matches" className={navLinkClass('matches')} onClick={() => setIsMenuOpen(false)}>Partidas</a>
+            <a href="#members" className={navLinkClass('members')} onClick={() => setIsMenuOpen(false)}>Jogadores</a>
+            <a href="#highlights" className={navLinkClass('highlights')} onClick={() => setIsMenuOpen(false)}>Destaques</a>
+            <a href="#tips" className={navLinkClass('tips')} onClick={() => setIsMenuOpen(false)}>Dicas</a>
           </div>
         </div>
       )}

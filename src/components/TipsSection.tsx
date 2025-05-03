@@ -68,7 +68,7 @@ const tipsData = {
 
 const TipsSection = () => {
   const [activeTab, setActiveTab] = useState("strategy");
-  
+
   return (
     <section id="tips" className="py-20 bg-gradient-to-b from-secondary to-furia-dark">
       <div className="container mx-auto px-4">
@@ -79,32 +79,32 @@ const TipsSection = () => {
             Seja você iniciante ou buscando refinar seu gameplay, nossos conselhos podem ajudar a elevar suas habilidades ao próximo nível.
           </p>
         </div>
-        
+
         <Tabs defaultValue="strategy" className="max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-3 bg-furia-gray/30 rounded-lg mb-8">
-            <TabsTrigger 
-              value="strategy" 
+            <TabsTrigger
+              value="strategy"
               className="data-[state=active]:bg-furia data-[state=active]:text-white"
               onClick={() => setActiveTab("strategy")}
             >
               Estratégia
             </TabsTrigger>
-            <TabsTrigger 
-              value="aim" 
+            <TabsTrigger
+              value="aim"
               className="data-[state=active]:bg-furia data-[state=active]:text-white"
               onClick={() => setActiveTab("aim")}
             >
               Mira & Movimento
             </TabsTrigger>
-            <TabsTrigger 
-              value="utility" 
+            <TabsTrigger
+              value="utility"
               className="data-[state=active]:bg-furia data-[state=active]:text-white"
               onClick={() => setActiveTab("utility")}
             >
               Uso de Utilidades
             </TabsTrigger>
           </TabsList>
-          
+
           <TabsContent value="strategy" className="space-y-6">
             {tipsData.strategy.map(tip => (
               <Card key={tip.id} className="bg-furia-gray/20 border-furia/20">
@@ -118,7 +118,7 @@ const TipsSection = () => {
               </Card>
             ))}
           </TabsContent>
-          
+
           <TabsContent value="aim" className="space-y-6">
             {tipsData.aim.map(tip => (
               <Card key={tip.id} className="bg-furia-gray/20 border-furia/20">
@@ -132,7 +132,7 @@ const TipsSection = () => {
               </Card>
             ))}
           </TabsContent>
-          
+
           <TabsContent value="utility" className="space-y-6">
             {tipsData.utility.map(tip => (
               <Card key={tip.id} className="bg-furia-gray/20 border-furia/20">
