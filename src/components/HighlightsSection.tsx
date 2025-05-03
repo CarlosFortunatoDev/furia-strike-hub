@@ -58,7 +58,7 @@ const HighlightsSection = () => {
     <section id="highlights" className="py-20 bg-furia-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Melhores <span className="text-furia">Momentos</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Melhores <span className="text-furia-yellow">Momentos</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
             Reviva os momentos mais emocionantes das partidas competitivas da FURIA.
             De jogadas clutch a obras-primas estratégicas, testemunhe a habilidade e determinação que definem nosso time.

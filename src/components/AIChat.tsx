@@ -92,7 +92,7 @@ const AIChat = () => {
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button
-            className="rounded-full w-16 h-16 bg-furia hover:bg-furia/90 shadow-lg"
+            className="rounded-full w-16 h-16 bg-furia-yellow/85 hover:bg-furia-yellow/50 shadow-lg"
             onClick={() => setIsOpen(true)}
           >
             <MessageSquare className="w-7 h-7" />

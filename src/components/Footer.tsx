@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4 text-furia">Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-furia-yellow">Links</h3>
             <ul className="space-y-2">
               <li><a href="#hero" className="text-gray-400 hover:text-furia transition-colors">Início</a></li>
               <li><a href="#members" className="text-gray-400 hover:text-furia transition-colors">Jogadores</a></li>
@@ -34,17 +34,17 @@ const Footer = () => {
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4 text-furia">Conecte-se</h3>
+            <h3 className="text-lg font-bold mb-4 text-furia-yellow">Conecte-se</h3>
             <ul className="space-y-2">
-              <li><a href="https://twitter.com/FURIA" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Twitter</a></li>
-              <li><a href="https://instagram.com/furiagg" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Instagram</a></li>
-              <li><a href="https://www.youtube.com/@FURIAggCS" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">YouTube</a></li>
-              <li><a href="https://twitch.tv/team/furia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-furia transition-colors">Twitch</a></li>
+              <li><a href="https://twitter.com/FURIA" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-0.7' src='public\twitter_x_icon.svg' width={30}/>Twitter</a></li>
+              <li><a href="https://instagram.com/furiagg" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='public\Instagram_icon.svg' width={15}/>Instagram</a></li>
+              <li><a href="https://www.youtube.com/@FURIAggCS" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='public\Youtube_icon.svg' width={15}/>YouTube</a></li>
+              <li><a href="https://twitch.tv/team/furia" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='public\twitch_icon.svg' width={20}/>Twitch</a></li>
             </ul>
           </div>
 
           <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4 text-furia">Newsletter</h3>
+            <h3 className="text-lg font-bold mb-4 text-furia-yellow">Newsletter</h3>
             <p className="text-sm text-gray-400 mb-4">Inscreva-se para receber as últimas notícias sobre a FURIA</p>
             <form className="flex flex-col sm:flex-row gap-2">
               <input
@@ -54,7 +54,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-furia text-white rounded-md hover:bg-furia/80 transition-colors"
+                className="px-4 py-2 bg-furia-yellow/85 text-white rounded-md hover:bg-furia-yellow/50 transition-colors"
               >
                 Inscrever
               </button>

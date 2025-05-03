@@ -75,7 +75,7 @@ const MembersSection = () => {
     <section id="members" className="py-20 bg-secondary ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Nossos <span className="text-furia">Jogadores</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Nossos <span className="text-furia-yellow">Jogadores</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
             Conheça os jogadores talentosos que compõem o elenco de Counter-Strike da FURIA.
             Cada membro traz talentos e expertise únicos para criar um dos times mais formidáveis do cenário competitivo.

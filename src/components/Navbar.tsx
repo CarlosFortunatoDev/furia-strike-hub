@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-secondary shadow-lg py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-furia-dark/85 shadow-lg py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">

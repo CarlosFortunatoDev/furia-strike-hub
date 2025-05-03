@@ -73,7 +73,7 @@ const TipsSection = () => {
     <section id="tips" className="py-20 bg-gradient-to-b from-secondary to-furia-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Dicas de <span className="text-furia">Pro</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Dicas de <span className="text-furia-yellow">Pro</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
             Melhore suas habilidades no Counter-Strike com dicas e estratégias profissionais diretamente dos jogadores da FURIA.
             Seja você iniciante ou buscando refinar seu gameplay, nossos conselhos podem ajudar a elevar suas habilidades ao próximo nível.

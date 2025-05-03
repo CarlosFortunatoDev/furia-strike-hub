@@ -58,6 +58,7 @@ export default {
 					dark: '#000000',    // Furia black
 					light: '#ffffff',   // White
 					gray: '#333333',    // Dark gray
+					yellow: '#FFDD33', // Light gray
 				}
 			},
 			borderRadius: {

@@ -38,7 +38,7 @@ const UpcomingMatches = () => {
     <section id='matches' className="to-furia-dark py-20 bg-furia-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-furia-light mb-4">Próximas <span className="text-furia">Partidas</span></h2>
+          <h2 className="text-4xl font-bold text-furia-light mb-4">Próximas <span className="text-furia-yellow">Partidas</span></h2>
           <p className="text-gray-400 max-w-3xl mx-auto">
             Não perca as próximas batalhas da FURIA no cenário competitivo.
             Marque em seu calendário e sintonize para apoiar o time nessas partidas.
