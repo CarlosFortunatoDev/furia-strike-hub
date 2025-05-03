@@ -95,7 +95,7 @@ const MembersSection = () => {
                   }}
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4">
-                  <h3 className="text-2xl font-bold text-furia">{player.name}</h3>
+                  <h3 className="text-2xl font-bold text-furia-yellow">{player.name}</h3>
                   <p className="text-furia-light text-sm">{player.fullName}</p>
                 </div>
               </div>
