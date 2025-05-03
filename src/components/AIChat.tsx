@@ -57,7 +57,8 @@ const AIChat = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/chat', {
+      // Alterando URL para apontar para o servidor correto (porta 3001)
+      const response = await fetch('http://localhost:3001/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
