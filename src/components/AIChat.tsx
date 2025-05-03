@@ -84,7 +84,10 @@ const AIChat = () => {
             <MessageSquare className="w-7 h-7" />
           </Button>
         </SheetTrigger>
-        <SheetContent className="w-[90%] sm:w-[380px] h-[500px] rounded-t-lg flex flex-col">
+        <SheetContent 
+          side="right"
+          className="w-[90%] sm:w-[380px] h-[500px] rounded-t-lg flex flex-col bottom-0 top-auto mt-auto mb-20 sm:mb-6"
+        >
           <SheetHeader className="border-b pb-2">
             <div className="flex justify-between items-center">
               <SheetTitle className="flex items-center">

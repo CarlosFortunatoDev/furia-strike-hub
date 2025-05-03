@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
+import { Youtube, Play } from 'lucide-react';
 
 const highlightsData = [
   {
@@ -11,7 +12,7 @@ const highlightsData = [
     views: "2.4M",
     duration: "14:22",
     date: "24 Jul, 2023",
-    videoId: "example1"
+    videoId: "SpKVCgq1oyY"
   },
   {
     id: 2,
@@ -20,7 +21,7 @@ const highlightsData = [
     views: "1.8M",
     duration: "8:45",
     date: "15 Set, 2023",
-    videoId: "example2"
+    videoId: "fh-a_HH0D7Y"
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const highlightsData = [
     views: "1.2M",
     duration: "10:17",
     date: "3 Out, 2023",
-    videoId: "example3"
+    videoId: "D18oxp1SxaM"
   },
   {
     id: 4,
@@ -38,11 +39,21 @@ const highlightsData = [
     views: "3.1M",
     duration: "18:05",
     date: "12 Nov, 2023",
-    videoId: "example4"
+    videoId: "HmAeB0zorKs"
   }
 ];
 
 const HighlightsSection = () => {
+  const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
+  const openVideo = (videoId: string) => {
+    setActiveVideo(videoId);
+  };
+
+  const closeVideo = () => {
+    setActiveVideo(null);
+  };
+
   return (
     <section id="highlights" className="py-20 bg-furia-dark">
       <div className="container mx-auto px-4">
@@ -57,7 +68,7 @@ const HighlightsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {highlightsData.map((highlight) => (
             <Card key={highlight.id} className="bg-furia-gray/20 border-furia/20 overflow-hidden hover:border-furia transition-all duration-300">
-              <div className="relative aspect-video overflow-hidden group cursor-pointer">
+              <div className="relative aspect-video overflow-hidden group cursor-pointer" onClick={() => openVideo(highlight.videoId)}>
                 <img
                   src={highlight.thumbnail}
                   alt={highlight.title}
@@ -70,9 +81,7 @@ const HighlightsSection = () => {
                 {/* Play button overlay */}
                 <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-16 h-16 flex items-center justify-center rounded-full bg-furia/80">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
+                    <Play className="text-white" />
                   </div>
                 </div>
 
@@ -99,6 +108,35 @@ const HighlightsSection = () => {
           </Button>
         </div>
       </div>
+
+      {/* Video Modal */}
+      {activeVideo && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-4xl">
+            <button 
+              onClick={closeVideo}
+              className="absolute -top-10 right-0 text-white hover:text-furia"
+              aria-label="Fechar vídeo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <div className="aspect-video w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
