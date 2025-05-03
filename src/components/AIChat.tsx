@@ -78,7 +78,7 @@ useEffect(() => {
 
       // Tentar um endpoint alternativo
       try {
-        const fallbackResponse = await fetch('https://furia-strike-hub.vercel.app/api/chat', {
+        const fallbackResponse = await fetch('https://furia-strike-hub.vercel.app:3001/api/chat', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
