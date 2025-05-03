@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
 
-## Project info
+# 🔥 FURIA CS2 FAN SITE 🔥
 
-**URL**: https://lovable.dev/projects/d20d058a-1475-4584-8791-db046441975c
+![FURIA Logo](https://logodownload.org/wp-content/uploads/2019/06/furia-logo-1.png)
 
-## How can I edit this code?
+E aí, gamers! Tá ligado nesse projeto **INSANO** que fizemos para os **VERDADEIROS** fãs da FURIA? Cola aqui e vem descobrir tudo sobre o **MELHOR ESQUADRÃO** do CS2 brasileiro! 🇧🇷🔥
 
-There are several ways of editing your application.
+## ⚡ O QUE É ESSE PROJETO?
 
-**Use Lovable**
+Mano, esse projeto é um site **GOD TIER** feito para os fãs da FURIA acompanharem TUDO sobre a nossa equipe preferida! Aqui tu vai encontrar:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d20d058a-1475-4584-8791-db046441975c) and start prompting.
+- 🎮 Perfil dos **MONSTROS** que compõem nosso time
+- 📆 Agenda completa com as próximas partidas (pra não perder NENHUM CLUTCH)
+- 🎥 Highlights **INSANOS** dos jogos
+- 💡 Dicas PRO PLAYER para melhorar teu gameplay
+- 🤖 Chat com IA da FURIA pra tirar TODAS as tuas dúvidas!
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 COMO USAR ESSA MÁQUINA DE GUERRA?
 
-**Use your preferred IDE**
+Quer rodar esse projeto na tua máquina? É mais fácil que dar um HS com AWP:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 📋 Requisitos:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (versão **ATUALIZADA**, tá ligado?)
+- NPM (gerenciador de pacotes do Node)
+- Uma paixão **ABSURDA** pela FURIA! 💪
 
-Follow these steps:
+### ⚙️ Instalação:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone esse repo GOD
+git clone <link-do-repositorio>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Entre na pasta do projeto
+cd furia-cs-fansite
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Instala as dependências (vai demorar menos que um rush B)
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Roda o projeto e já GGGWP
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 🤖 Configurando o Chat da IA:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Pra configurar o assistente virtual mais **INSANO** do cenário:
 
-**Use GitHub Codespaces**
+1. Acessa a pasta `server`
+2. Cola esse comando aí:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+# Instala as deps do servidor (rapidinho)
+npm install
 
-## What technologies are used for this project?
+# Bota o servidor pra trampar
+npm run dev
+```
 
-This project is built with:
+IMPORTANTE: A API key já tá configurada no código! Não precisa fazer mais nada, mano! É só dar GG! 🎮
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 💻 CHAT COM IA - COMO FUNCIONA ESSA BRUXARIA?
 
-## How can I deploy this project?
+O chat da FURIA é um assistente virtual **COMPLETAMENTE APELÃO** que vai responder todas as tuas dúvidas sobre:
 
-Simply open [Lovable](https://lovable.dev/projects/d20d058a-1475-4584-8791-db046441975c) and click on Share -> Publish.
+- 🎯 Estatísticas dos jogadores
+- 🏆 Histórico de campeonatos
+- 🔧 Dicas de gameplay
+- 🗓️ Próximos jogos
+- 📰 Notícias quentinhas sobre a equipe
 
-## Can I connect a custom domain to my Lovable project?
+É só clicar no botão flutuante no canto inferior direito da tela e fazer teu questionamento! O assistente é treinado pra responder EXATAMENTE como um fã da FURIA falaria! 🔥
 
-Yes, you can!
+## 🛠️ TECNOLOGIAS GOD TIER USADAS
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Esse projeto foi feito com tecnologias **MONSTRUOSAS**:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **React + TypeScript**: Mais rápido que um flick com AWP ⚡
+- **Tailwind CSS**: Visual CLEAN igual um AK com skin Asiimov 💯
+- **shadcn/ui**: Componentes mais bonitos que uma Butterfly Knife Doppler 🔪
+- **Node.js + Express**: Backend mais sólido que a defesa do arT 🛡️
+- **OpenAI API**: IA mais esperta que uma rotação fake da FURIA 🧠
+
+## 🤔 PERGUNTAS FREQUENTES (FAQ)
+
+### P: O site é oficial da FURIA?
+R: Não mano, é um projeto **INSANO** feito por fãs para fãs! Mas feito com o mesmo HYPE que nosso time joga!
+
+### P: Posso contribuir com o projeto?
+R: CLARO! Faz aquele fork, implementa features **DOIDAS** e manda aquele pull request! A comunidade FURIA é a mais engajada do Brasil! 🇧🇷
+
+### P: Como reporto um bug?
+R: Abre uma issue no GitHub mais rápido que um B rush na Mirage! 💨
+
+## 📞 FICA NA CALL
+
+Segue a FURIA em todas as redes:
+- [Twitter](https://twitter.com/FURIA)
+- [Instagram](https://www.instagram.com/furia)
+- [Twitch](https://www.twitch.tv/furia)
+- [YouTube](https://www.youtube.com/furiagaming)
+
+## ⚖️ CRÉDITOS E DIREITOS
+
+Este é um projeto de fã e não tem nenhuma afiliação oficial com a FURIA Esports.
+Todos os direitos da marca FURIA, logos e imagens pertencem à FURIA Esports.
+
+---
+
+**GG WP! COLOCA ESSE PROJETO NOS FAVORITOS E BORA APOIAR A FURIA!** 🔥👊

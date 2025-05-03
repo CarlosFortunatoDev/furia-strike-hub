@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Initialize OpenAI with API key from environment variables
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || 'sk-your-api-key-here', // Substitua pelo seu API key real em um arquivo .env
+  apiKey: process.env.OPENAI_API_KEY || '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', // API key padrão se não estiver no .env
 });
 
 app.post('/api/chat', async (req, res) => {
