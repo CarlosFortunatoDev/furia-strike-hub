@@ -57,8 +57,9 @@ const AIChat = () => {
     setIsLoading(true);
 
     try {
-      // Alterando URL para apontar para o servidor correto (porta 3001)
-      const response = await fetch('http://localhost:3001/api/chat', {
+      // Usando a API de mock interna em vez de tentar acessar o localhost
+      // pois quando hospedado no Lovable não conseguimos acessar o localhost
+      const response = await fetch('/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
