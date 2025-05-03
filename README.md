@@ -1,7 +1,7 @@
 
 # 🔥 FURIA CS2 FAN SITE 🔥
 
-![FURIA Logo](https://logodownload.org/wp-content/uploads/2019/06/furia-logo-1.png)
+![FURIA Logo]([https://logodownload.org/wp-content/uploads/2019/06/furia-logo-1.png](https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png))
 
 E aí, gamers! Tá ligado nesse projeto **INSANO** que fizemos para os **VERDADEIROS** fãs da FURIA? Cola aqui e vem descobrir tudo sobre o **MELHOR ESQUADRÃO** do CS2 brasileiro! 🇧🇷🔥
 
