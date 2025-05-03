@@ -8,7 +8,7 @@ const playerData = [
     name: "arT",
     fullName: "Andrei Piovezan",
     role: "Capitão / IGL",
-    image: "/player-art.png",
+    image: "https://dgvdyislmj77y.cloudfront.net/eyJidWNrZXQiOiJ0cmFkZWl0LXdpa2kiLCJrZXkiOiJwbGF5ZXJzL2FydC53ZWJwIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoiMzAwIiwiaGVpZ2h0IjpudWxsLCJmaXQiOiJjb3ZlciJ9LCJ3ZWJwIjp7ImVmZm9ydCI6MywicXVhbGl0eSI6ODB9fX0=",
     stats: {
       rating: "1.15",
       headshot: "48.2%",
@@ -21,7 +21,7 @@ const playerData = [
     name: "KSCERATO",
     fullName: "Kaike Cerato",
     role: "Rifler",
-    image: "/player-kscerato.png",
+    image: "https://img-cdn.hltv.org/playerbodyshot/U6t0j2bJDKUR3mTI8rIqv7.png?ixlib=java-2.1.0&w=400&s=b5257c378b8122f415f21985855e95ca",
     stats: {
       rating: "1.29",
       headshot: "52.7%",
@@ -34,7 +34,7 @@ const playerData = [
     name: "yuurih",
     fullName: "Yuri Santos",
     role: "Rifler / Suporte",
-    image: "/player-yuurih.png",
+    image: "https://img-cdn.hltv.org/playerbodyshot/i6UGhkYxrhutAOmWZT0-8O.png?ixlib=java-2.1.0&w=400&s=2cd696f6ff4baf5680a43d537214b6eb",
     stats: {
       rating: "1.24",
       headshot: "50.1%",
@@ -47,7 +47,7 @@ const playerData = [
     name: "chelo",
     fullName: "Marcelo Cespedes",
     role: "Rifler",
-    image: "/player-chelo.png",
+    image: "https://img-cdn.hltv.org/playerbodyshot/1UmLZkSSAfBosakeRR3gwZ.png?ixlib=java-2.1.0&w=400&s=4b513eb29f7896053a6996ef30575ed8",
     stats: {
       rating: "1.18",
       headshot: "54.3%",
@@ -60,7 +60,7 @@ const playerData = [
     name: "drop",
     fullName: "André Abreu",
     role: "AWPer",
-    image: "/player-drop.png",
+    image: "https://images.steamusercontent.com/ugc/1834649355088417052/F26C0D0CACBD98AF3D6F642BCB35A733444E8F46/",
     stats: {
       rating: "1.17",
       headshot: "38.2%",
@@ -72,7 +72,7 @@ const playerData = [
 
 const MembersSection = () => {
   return (
-    <section id="members" className="py-20 bg-secondary">
+    <section id="members" className="py-20 bg-secondary ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-furia-light mb-4">Nossos <span className="text-furia">Jogadores</span></h2>
@@ -81,7 +81,7 @@ const MembersSection = () => {
             Cada membro traz talentos e expertise únicos para criar um dos times mais formidáveis do cenário competitivo.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {playerData.map((player) => (
             <Card key={player.id} className="bg-furia-gray/20 border-furia/20 overflow-hidden hover:border-furia transition-all duration-300 transform hover:-translate-y-2 h-full">
@@ -99,13 +99,13 @@ const MembersSection = () => {
                   <p className="text-furia-light text-sm">{player.fullName}</p>
                 </div>
               </div>
-              
+
               <CardContent className="p-4">
                 <div className="text-furia-light mb-4">
                   <p className="text-sm text-gray-400">Função</p>
                   <p className="font-semibold">{player.role}</p>
                 </div>
-                
+
                 <div className="grid grid-cols-3 gap-2 mb-4">
                   <div className="text-center p-2 bg-furia-gray/30 rounded-md">
                     <p className="text-xs text-gray-400">Rating</p>
@@ -120,7 +120,7 @@ const MembersSection = () => {
                     <p className="font-bold text-furia">{player.stats.kdr}</p>
                   </div>
                 </div>
-                
+
                 <p className="text-sm text-gray-400">{player.bio}</p>
               </CardContent>
             </Card>

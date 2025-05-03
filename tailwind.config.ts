@@ -54,7 +54,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				furia: {
-					DEFAULT: '#ff5900', // Furia orange
+					DEFAULT: '#B4B4B4', // Furia orange
 					dark: '#000000',    // Furia black
 					light: '#ffffff',   // White
 					gray: '#333333',    // Dark gray
@@ -91,5 +91,6 @@ export default {
 			}
 		}
 	},
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;

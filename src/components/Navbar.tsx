@@ -41,7 +41,7 @@ const Navbar = () => {
               alt="Logo FURIA"
               className="h-10 w-auto"
               onError={(e) => {
-                e.currentTarget.src = "https://placehold.co/120x40/000000/FF5900?text=FURIA";
+                e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png";
               }}
             />
           </Link>
@@ -53,16 +53,11 @@ const Navbar = () => {
           <Link to="#members" className="nav-link">Jogadores</Link>
           <Link to="#highlights" className="nav-link">Destaques</Link>
           <Link to="#tips" className="nav-link">Dicas</Link>
-          <Button 
-            className="ml-4 bg-furia hover:bg-furia/80 text-white"
-          >
-            Apoie-nos
-          </Button>
         </div>
 
         {/* Mobile Navigation Button */}
         <div className="md:hidden flex items-center">
-          <button 
+          <button
             onClick={toggleMenu}
             className="text-furia-light hover:text-furia p-2"
             aria-label="Alternar Menu"
@@ -84,11 +79,6 @@ const Navbar = () => {
             <Link to="#members" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Jogadores</Link>
             <Link to="#highlights" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Destaques</Link>
             <Link to="#tips" className="block nav-link py-3" onClick={() => setIsMenuOpen(false)}>Dicas</Link>
-            <Button 
-              className="w-full bg-furia hover:bg-furia/80 text-white mt-4"
-            >
-              Apoie-nos
-            </Button>
           </div>
         </div>
       )}

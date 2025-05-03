@@ -37,7 +37,7 @@ const AIChat = () => {
 
     const userMessage = inputMessage;
     setInputMessage('');
-    
+
     // Add user message to chat
     setMessages(prev => [...prev, { role: 'user', content: userMessage }]);
     setIsLoading(true);
@@ -56,17 +56,17 @@ const AIChat = () => {
       }
 
       const data = await response.json();
-      
+
       // Add AI response to chat
       setMessages(prev => [...prev, { role: 'assistant', content: data.response }]);
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
       toast.error('Não foi possível conectar ao chat. Tente novamente mais tarde.');
-      
+
       // Add error message to chat
-      setMessages(prev => [...prev, { 
-        role: 'assistant', 
-        content: 'Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.' 
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: 'Desculpe, estou enfrentando dificuldades técnicas no momento. Por favor, tente novamente mais tarde.'
       }]);
     } finally {
       setIsLoading(false);
@@ -77,7 +77,7 @@ const AIChat = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
-          <Button 
+          <Button
             className="rounded-full w-16 h-16 bg-furia hover:bg-furia/90 shadow-lg"
             onClick={() => setIsOpen(true)}
           >
@@ -91,28 +91,20 @@ const AIChat = () => {
                 <MessageSquare className="w-5 h-5 mr-2 text-furia" />
                 Chat FURIA
               </SheetTitle>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                onClick={() => setIsOpen(false)} 
-                className="h-8 w-8"
-              >
-                <X className="h-4 w-4" />
-              </Button>
             </div>
           </SheetHeader>
-          
-          <ScrollArea 
-            className="flex-1 pr-4 my-4" 
+
+          <ScrollArea
+            className="flex-1 pr-4 my-4"
             ref={scrollAreaRef as React.RefObject<HTMLDivElement>}
           >
             <div className="flex flex-col gap-3">
               {messages.map((message, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`max-w-[80%] p-3 rounded-lg ${
-                    message.role === 'user' 
-                      ? 'bg-furia text-white self-end' 
+                    message.role === 'user'
+                      ? 'bg-furia text-white self-end'
                       : 'bg-secondary text-white self-start'
                   }`}
                 >
@@ -130,7 +122,7 @@ const AIChat = () => {
               )}
             </div>
           </ScrollArea>
-          
+
           <form onSubmit={handleSubmit} className="border-t pt-4 flex items-center gap-2">
             <Input
               value={inputMessage}
@@ -139,10 +131,10 @@ const AIChat = () => {
               className="flex-1"
               disabled={isLoading}
             />
-            <Button 
-              type="submit" 
-              size="icon" 
-              disabled={isLoading || !inputMessage.trim()} 
+            <Button
+              type="submit"
+              size="icon"
+              disabled={isLoading || !inputMessage.trim()}
               className="bg-furia hover:bg-furia/90"
             >
               <Send className="h-4 w-4" />

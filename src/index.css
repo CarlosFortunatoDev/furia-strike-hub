@@ -53,20 +53,20 @@
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
                 url('/hero-bg.jpg') no-repeat center center/cover;
   }
-  
+
   .nav-link {
     @apply relative px-4 py-2 text-furia-light hover:text-furia transition-colors duration-200;
   }
-  
+
   .nav-link::after {
     content: '';
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-furia transition-all duration-300;
   }
-  
+
   .nav-link:hover::after {
     @apply w-full;
   }
-  
+
   .card-gradient {
     background: linear-gradient(45deg, rgba(0,0,0,0.9) 30%, rgba(255,89,0,0.8) 100%);
   }
