@@ -35,7 +35,7 @@ O objetivo é criar um portal para fãs acompanharem de perto o time de CS da FU
 git clone <URL-do-repositório>
 
 # Acesse a pasta do projeto
-cd furia-cs-fansite
+cd .\furia-cs-fansite\
 
 # Instale as dependências do front-end
 npm install
@@ -46,8 +46,15 @@ npm run dev
 ## 🤖 Para rodar o servidor do chat:
 
 ```bash
+# Acessa a pasta da api do chat servidor
+cd .\api\
+
+# Colocar sua chave da openIA no VITE_OPENAI_API_KEY:
+VITE_OPENAI_API_KEY=your_openai_api_key
+VITE_API_URL=http://localhost:3001
+
 # Acessa a pasta do servidor
-cd server
+cd ..\server\
 
 # Instala as dependências
 npm install
