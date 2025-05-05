@@ -32,10 +32,10 @@ O objetivo é criar um portal para fãs acompanharem de perto o time de CS da FU
 
 ```bash
 # Clone o repositório
-git clone <URL-do-repositório>
+git clone https://github.com/CarlosFortunatoDev/furia-strike-hub
 
 # Acesse a pasta do projeto
-cd .\furia-cs-fansite\
+cd .\furia-strike-hub\
 
 # Instale as dependências do front-end
 npm install
