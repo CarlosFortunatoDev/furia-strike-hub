@@ -36,10 +36,10 @@ const Footer = () => {
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4 text-furia-yellow">Conecte-se</h3>
             <ul className="space-y-2">
-              <li><a href="https://twitter.com/FURIA" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-0.7' src='.\public\twitter_x_icon.svg' width={30}/>Twitter</a></li>
-              <li><a href="https://instagram.com/furiagg" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='.\public\Instagram_icon.svg' width={15}/>Instagram</a></li>
-              <li><a href="https://www.youtube.com/@FURIAggCS" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='.\public\Youtube_icon.svg' width={15}/>YouTube</a></li>
-              <li><a href="https://twitch.tv/team/furia" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='.\public\twitch_icon.svg' width={20}/>Twitch</a></li>
+              <li><a href="https://twitter.com/FURIA" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-0.7' src='\twitter_x_icon.svg' width={30}/>Twitter</a></li>
+              <li><a href="https://instagram.com/furiagg" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='\Instagram_icon.svg' width={15}/>Instagram</a></li>
+              <li><a href="https://www.youtube.com/@FURIAggCS" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='\Youtube_icon.svg' width={15}/>YouTube</a></li>
+              <li><a href="https://twitch.tv/team/furia" target="_blank" rel="noopener noreferrer" className="flex text-gray-400 hover:text-furia transition-colors"><img className='mr-2 ml-1.5' src='\twitch_icon.svg' width={20}/>Twitch</a></li>
             </ul>
           </div>
 

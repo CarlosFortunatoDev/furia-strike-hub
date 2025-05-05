@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { OpenAI } from 'openai';
 
 const openai = new OpenAI({
-  apiKey: process.env.VITE_OPENAI_API_KEY || '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',
+  apiKey: process.env.VITE_OPENAI_API_KEY || 'your-openai-api-key',
 });
 
 export default async function handler(req, res) {
