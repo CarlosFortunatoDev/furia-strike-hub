@@ -1,8 +1,8 @@
-# 🔥 FURIA CS2 Fan Site
+# 🔥 FURIA Strike Hub
 
 ![FURIA Logo](https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png)
 
-Bem-vindo ao **FURIA CS2 Fan Site**, um projeto desenvolvido para o processo seletivo de **Assistente de Engenharia de Software** na FURIA Esports.
+Bem-vindo ao **FURIA Strike Hub**, um projeto desenvolvido para o processo seletivo de **Assistente de Engenharia de Software** na FURIA Esports.
 
 Este projeto oferece uma experiência interativa para fãs do time de CS2 da FURIA, com foco em conteúdo relevante, interações inteligentes e uma interface que reflete a identidade da equipe.
 
